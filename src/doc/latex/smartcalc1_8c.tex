@@ -1,0 +1,124 @@
+\hypertarget{smartcalc1_8c}{}\doxysection{/\+Users/alvintha/\+C7\+\_\+\+Smart\+Calc\+\_\+v1.0-\/0/src/smartcalc1.c File Reference}
+\label{smartcalc1_8c}\index{/Users/alvintha/C7\_SmartCalc\_v1.0-\/0/src/smartcalc1.c@{/Users/alvintha/C7\_SmartCalc\_v1.0-\/0/src/smartcalc1.c}}
+{\ttfamily \#include \char`\"{}smartcalc1.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlist}{list}} $\ast$ \mbox{\hyperlink{smartcalc1_8c_aae3d2d5322fd5a476e7401d0054fabb9}{create\+\_\+list\+\_\+item}} (double val, int priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}})
+\begin{DoxyCompactList}\small\item\em Создает новый элемент \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{smartcalc1_8c_aef1f34588ddc98c4e46eee002274fc3f}{insert\+\_\+start\+\_\+list}} (double val, int priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+void \mbox{\hyperlink{smartcalc1_8c_a43e3e7598c730546200fde55a59fd99e}{insert\+\_\+end\+\_\+list}} (double val, int priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+void \mbox{\hyperlink{smartcalc1_8c_aae620175128539759cc507ce69d488c4}{delete\+\_\+start\+\_\+list}} (struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+void \mbox{\hyperlink{smartcalc1_8c_a99d0241818a773845407fb131dc81ccb}{delete\+\_\+end\+\_\+list}} (struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+int \mbox{\hyperlink{smartcalc1_8c_ae3de7677b138df5d71ebc2aa0b205b6f}{return\+\_\+start\+\_\+list}} (double $\ast$val, int $\ast$priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} $\ast$\mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+int \mbox{\hyperlink{smartcalc1_8c_a1b7847a7965bb53f384f32ebfa9db1c3}{return\+\_\+end\+\_\+list}} (double $\ast$val, int $\ast$priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} $\ast$\mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+int \mbox{\hyperlink{smartcalc1_8c_a8d729394556f13cc9d089df4921b1bb6}{calling\+\_\+function}} (struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$stack)
+\item 
+int \mbox{\hyperlink{smartcalc1_8c_aa867963c7cd8f6841b3760d8b185191e}{parser}} (char expression\mbox{[}256\mbox{]}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head, double val\+\_\+of\+\_\+x)
+\item 
+int \mbox{\hyperlink{smartcalc1_8c_a55eac194bed068f27efb5b70279aadf8}{stack\+\_\+work}} (struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$initial\+\_\+list, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$stack)
+\item 
+int \mbox{\hyperlink{smartcalc1_8c_a06ea81415ee5a2072758adfbe5ca1b03}{calculation}} (char $\ast$str, double value\+\_\+of\+\_\+x, double $\ast$result)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{smartcalc1_8c_a06ea81415ee5a2072758adfbe5ca1b03}\label{smartcalc1_8c_a06ea81415ee5a2072758adfbe5ca1b03}} 
+\index{smartcalc1.c@{smartcalc1.c}!calculation@{calculation}}
+\index{calculation@{calculation}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{calculation()}{calculation()}}
+{\footnotesize\ttfamily int calculation (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{double}]{value\+\_\+of\+\_\+x,  }\item[{double $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8c_a8d729394556f13cc9d089df4921b1bb6}\label{smartcalc1_8c_a8d729394556f13cc9d089df4921b1bb6}} 
+\index{smartcalc1.c@{smartcalc1.c}!calling\_function@{calling\_function}}
+\index{calling\_function@{calling\_function}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{calling\_function()}{calling\_function()}}
+{\footnotesize\ttfamily int calling\+\_\+function (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8c_aae3d2d5322fd5a476e7401d0054fabb9}\label{smartcalc1_8c_aae3d2d5322fd5a476e7401d0054fabb9}} 
+\index{smartcalc1.c@{smartcalc1.c}!create\_list\_item@{create\_list\_item}}
+\index{create\_list\_item@{create\_list\_item}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{create\_list\_item()}{create\_list\_item()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structlist}{list}} $\ast$ create\+\_\+list\+\_\+item (\begin{DoxyParamCaption}\item[{double}]{val,  }\item[{int}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Создает новый элемент 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+{\em priority} & \\
+\hline
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct list$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{smartcalc1_8c_a99d0241818a773845407fb131dc81ccb}\label{smartcalc1_8c_a99d0241818a773845407fb131dc81ccb}} 
+\index{smartcalc1.c@{smartcalc1.c}!delete\_end\_list@{delete\_end\_list}}
+\index{delete\_end\_list@{delete\_end\_list}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{delete\_end\_list()}{delete\_end\_list()}}
+{\footnotesize\ttfamily void delete\+\_\+end\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8c_aae620175128539759cc507ce69d488c4}\label{smartcalc1_8c_aae620175128539759cc507ce69d488c4}} 
+\index{smartcalc1.c@{smartcalc1.c}!delete\_start\_list@{delete\_start\_list}}
+\index{delete\_start\_list@{delete\_start\_list}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{delete\_start\_list()}{delete\_start\_list()}}
+{\footnotesize\ttfamily void delete\+\_\+start\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8c_a43e3e7598c730546200fde55a59fd99e}\label{smartcalc1_8c_a43e3e7598c730546200fde55a59fd99e}} 
+\index{smartcalc1.c@{smartcalc1.c}!insert\_end\_list@{insert\_end\_list}}
+\index{insert\_end\_list@{insert\_end\_list}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{insert\_end\_list()}{insert\_end\_list()}}
+{\footnotesize\ttfamily void insert\+\_\+end\+\_\+list (\begin{DoxyParamCaption}\item[{double}]{val,  }\item[{int}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}}]{,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8c_aef1f34588ddc98c4e46eee002274fc3f}\label{smartcalc1_8c_aef1f34588ddc98c4e46eee002274fc3f}} 
+\index{smartcalc1.c@{smartcalc1.c}!insert\_start\_list@{insert\_start\_list}}
+\index{insert\_start\_list@{insert\_start\_list}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{insert\_start\_list()}{insert\_start\_list()}}
+{\footnotesize\ttfamily void insert\+\_\+start\+\_\+list (\begin{DoxyParamCaption}\item[{double}]{val,  }\item[{int}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}}]{element,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+{\em priority} & \\
+\hline
+{\em element} & \\
+\hline
+{\em head} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{smartcalc1_8c_aa867963c7cd8f6841b3760d8b185191e}\label{smartcalc1_8c_aa867963c7cd8f6841b3760d8b185191e}} 
+\index{smartcalc1.c@{smartcalc1.c}!parser@{parser}}
+\index{parser@{parser}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}}
+{\footnotesize\ttfamily int parser (\begin{DoxyParamCaption}\item[{char}]{expression\mbox{[}256\mbox{]},  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head,  }\item[{double}]{val\+\_\+of\+\_\+x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8c_a1b7847a7965bb53f384f32ebfa9db1c3}\label{smartcalc1_8c_a1b7847a7965bb53f384f32ebfa9db1c3}} 
+\index{smartcalc1.c@{smartcalc1.c}!return\_end\_list@{return\_end\_list}}
+\index{return\_end\_list@{return\_end\_list}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{return\_end\_list()}{return\_end\_list()}}
+{\footnotesize\ttfamily int return\+\_\+end\+\_\+list (\begin{DoxyParamCaption}\item[{double $\ast$}]{val,  }\item[{int $\ast$}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} $\ast$}]{element,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8c_ae3de7677b138df5d71ebc2aa0b205b6f}\label{smartcalc1_8c_ae3de7677b138df5d71ebc2aa0b205b6f}} 
+\index{smartcalc1.c@{smartcalc1.c}!return\_start\_list@{return\_start\_list}}
+\index{return\_start\_list@{return\_start\_list}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{return\_start\_list()}{return\_start\_list()}}
+{\footnotesize\ttfamily int return\+\_\+start\+\_\+list (\begin{DoxyParamCaption}\item[{double $\ast$}]{val,  }\item[{int $\ast$}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} $\ast$}]{element,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8c_a55eac194bed068f27efb5b70279aadf8}\label{smartcalc1_8c_a55eac194bed068f27efb5b70279aadf8}} 
+\index{smartcalc1.c@{smartcalc1.c}!stack\_work@{stack\_work}}
+\index{stack\_work@{stack\_work}!smartcalc1.c@{smartcalc1.c}}
+\doxysubsubsection{\texorpdfstring{stack\_work()}{stack\_work()}}
+{\footnotesize\ttfamily int stack\+\_\+work (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{initial\+\_\+list,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{stack }\end{DoxyParamCaption})}
+

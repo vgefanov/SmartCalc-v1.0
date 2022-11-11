@@ -107,7 +107,7 @@ int calling_function(struct list **stack) {
         struct list operand3 = {0, 0, 0, NULL};
         struct list operand4 = {0, 0, 0, NULL};
         return_start_list(&operator.val, &operator.priority, &operator.element, stack);
-        while (operator.element < 4) {
+        while (operator.element<4) {
             insert_end_list(operator.val, operator.priority, operator.element, &buff);
             delete_start_list(stack);
             int res = return_start_list(&operator.val, &operator.priority, &operator.element, stack);
@@ -116,7 +116,7 @@ int calling_function(struct list **stack) {
             }
         }
         delete_start_list(stack);
-        if (operator.element < 10) {
+        if (operator.element<10) {
             return_end_list(&operand2.val, &operand2.priority, &operand2.element, &buff);
             delete_end_list(&buff);
             return_end_list(&operand3.val, &operand3.priority, &operand3.element, &buff);

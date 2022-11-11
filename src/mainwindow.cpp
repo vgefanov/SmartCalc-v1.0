@@ -78,7 +78,7 @@ void MainWindow::operations()
     {
         all_numbers = (ui->result_show->text()).toDouble();
         all_numbers = all_numbers * 0.01;
-        new_label = QString::number(all_numbers, 'g', 15);
+        new_label = QString::number(all_numbers, 'g', 35);
         ui->result_show->setText(new_label);
     }
     else if (button->text() == "+" && operator_ex)

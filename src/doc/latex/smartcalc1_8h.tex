@@ -1,0 +1,262 @@
+\hypertarget{smartcalc1_8h}{}\doxysection{/\+Users/alvintha/\+C7\+\_\+\+Smart\+Calc\+\_\+v1.0-\/0/src/smartcalc1.h File Reference}
+\label{smartcalc1_8h}\index{/Users/alvintha/C7\_SmartCalc\_v1.0-\/0/src/smartcalc1.h@{/Users/alvintha/C7\_SmartCalc\_v1.0-\/0/src/smartcalc1.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlist}{list}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{smartcalc1_8h_ab317a2c9d3e85ab77ecfc353f08e9a36}{digit}}(ch)~(((ch) $>$= \textquotesingle{}0\textquotesingle{} \&\& (ch) $<$= \textquotesingle{}9\textquotesingle{}) $\vert$$\vert$ (ch) == \textquotesingle{}.\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} \{ \newline
+\mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa3d471bbc625ab9d660a5dce169d0d82c}{open\+\_\+bracket}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa97c3773abdf22ad32ac69e6a9bf40f11}{closing\+\_\+bracket}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaacab1e15e82c5976bfb476ddfe145263c}{x}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaafcd7df4b0a5d1b09723e22742d8a60a3}{number}}
+, \newline
+\mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaadbbc94ea3351977e33fa1a1d9dfc458f}{addition}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa1e23e924d32a36bdd43f4293c5f24e57}{subtraction}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa5cadaaaf2f12196ff90d101dbcb07287}{multiplication}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaaf91a7893f9d938f7eb36433f93f99f26}{division}}
+, \newline
+\mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaaa50b39921e23fcc725c63ce3c1bb961b}{exponentiation}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaae2dbef13a8b56efadc4ae920fc000bf5}{modulus}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaae4b0a0b590fcd59653fbe6bab6c9ebeb}{f\+\_\+cos}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa3df9ba3def18d8b08ec10d3da2a0c728}{f\+\_\+sin}}
+, \newline
+\mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa624edb4a2942fa7deccc5c8fe236b9ca}{f\+\_\+tan}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa5dbfec71e54a6da7160909c50f322da7}{f\+\_\+acos}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaac792c55dc90b897b550c836e2ad8b623}{f\+\_\+asin}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaac3021dcc7cd1c2e711ab356904595617}{f\+\_\+atan}}
+, \newline
+\mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaad83c08f535e93072c640f12f688aa2f6}{f\+\_\+sqrt}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa7b0f677919cf951fc21077c2999a4709}{f\+\_\+ln}}
+, \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaad5d71bce04d5544a6e7824e6caea286f}{f\+\_\+log}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlist}{list}} $\ast$ \mbox{\hyperlink{smartcalc1_8h_aae3d2d5322fd5a476e7401d0054fabb9}{create\+\_\+list\+\_\+item}} (double val, int priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}})
+\begin{DoxyCompactList}\small\item\em Создает новый элемент \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{smartcalc1_8h_aef1f34588ddc98c4e46eee002274fc3f}{insert\+\_\+start\+\_\+list}} (double val, int priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+void \mbox{\hyperlink{smartcalc1_8h_a43e3e7598c730546200fde55a59fd99e}{insert\+\_\+end\+\_\+list}} (double val, int priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+void \mbox{\hyperlink{smartcalc1_8h_aae620175128539759cc507ce69d488c4}{delete\+\_\+start\+\_\+list}} (struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+void \mbox{\hyperlink{smartcalc1_8h_a99d0241818a773845407fb131dc81ccb}{delete\+\_\+end\+\_\+list}} (struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+int \mbox{\hyperlink{smartcalc1_8h_ae3de7677b138df5d71ebc2aa0b205b6f}{return\+\_\+start\+\_\+list}} (double $\ast$val, int $\ast$priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} $\ast$\mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+int \mbox{\hyperlink{smartcalc1_8h_a1b7847a7965bb53f384f32ebfa9db1c3}{return\+\_\+end\+\_\+list}} (double $\ast$val, int $\ast$priority, enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} $\ast$\mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head)
+\item 
+int \mbox{\hyperlink{smartcalc1_8h_a8d729394556f13cc9d089df4921b1bb6}{calling\+\_\+function}} (struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$stack)
+\item 
+int \mbox{\hyperlink{smartcalc1_8h_aa867963c7cd8f6841b3760d8b185191e}{parser}} (char expression\mbox{[}256\mbox{]}, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$head, double val\+\_\+of\+\_\+x)
+\item 
+int \mbox{\hyperlink{smartcalc1_8h_a55eac194bed068f27efb5b70279aadf8}{stack\+\_\+work}} (struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$initial\+\_\+list, struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$stack)
+\item 
+int \mbox{\hyperlink{smartcalc1_8h_a06ea81415ee5a2072758adfbe5ca1b03}{calculation}} (char $\ast$str, double value\+\_\+of\+\_\+x, double $\ast$result)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{smartcalc1_8h_ab317a2c9d3e85ab77ecfc353f08e9a36}\label{smartcalc1_8h_ab317a2c9d3e85ab77ecfc353f08e9a36}} 
+\index{smartcalc1.h@{smartcalc1.h}!digit@{digit}}
+\index{digit@{digit}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{digit}{digit}}
+{\footnotesize\ttfamily \#define digit(\begin{DoxyParamCaption}\item[{}]{ch }\end{DoxyParamCaption})~(((ch) $>$= \textquotesingle{}0\textquotesingle{} \&\& (ch) $<$= \textquotesingle{}9\textquotesingle{}) $\vert$$\vert$ (ch) == \textquotesingle{}.\textquotesingle{})}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}} 
+\index{smartcalc1.h@{smartcalc1.h}!element@{element}}
+\index{element@{element}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{element}{element}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{open\_bracket@{open\_bracket}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!open\_bracket@{open\_bracket}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa3d471bbc625ab9d660a5dce169d0d82c}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa3d471bbc625ab9d660a5dce169d0d82c}} 
+open\+\_\+bracket&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{closing\_bracket@{closing\_bracket}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!closing\_bracket@{closing\_bracket}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa97c3773abdf22ad32ac69e6a9bf40f11}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa97c3773abdf22ad32ac69e6a9bf40f11}} 
+closing\+\_\+bracket&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{x@{x}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!x@{x}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaacab1e15e82c5976bfb476ddfe145263c}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaacab1e15e82c5976bfb476ddfe145263c}} 
+x&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{number@{number}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!number@{number}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaafcd7df4b0a5d1b09723e22742d8a60a3}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaafcd7df4b0a5d1b09723e22742d8a60a3}} 
+number&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{addition@{addition}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!addition@{addition}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaadbbc94ea3351977e33fa1a1d9dfc458f}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaadbbc94ea3351977e33fa1a1d9dfc458f}} 
+addition&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{subtraction@{subtraction}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!subtraction@{subtraction}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa1e23e924d32a36bdd43f4293c5f24e57}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa1e23e924d32a36bdd43f4293c5f24e57}} 
+subtraction&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{multiplication@{multiplication}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!multiplication@{multiplication}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa5cadaaaf2f12196ff90d101dbcb07287}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa5cadaaaf2f12196ff90d101dbcb07287}} 
+multiplication&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{division@{division}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!division@{division}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaaf91a7893f9d938f7eb36433f93f99f26}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaaf91a7893f9d938f7eb36433f93f99f26}} 
+division&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{exponentiation@{exponentiation}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!exponentiation@{exponentiation}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaaa50b39921e23fcc725c63ce3c1bb961b}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaaa50b39921e23fcc725c63ce3c1bb961b}} 
+exponentiation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{modulus@{modulus}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!modulus@{modulus}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaae2dbef13a8b56efadc4ae920fc000bf5}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaae2dbef13a8b56efadc4ae920fc000bf5}} 
+modulus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\_cos@{f\_cos}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!f\_cos@{f\_cos}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaae4b0a0b590fcd59653fbe6bab6c9ebeb}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaae4b0a0b590fcd59653fbe6bab6c9ebeb}} 
+f\+\_\+cos&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\_sin@{f\_sin}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!f\_sin@{f\_sin}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa3df9ba3def18d8b08ec10d3da2a0c728}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa3df9ba3def18d8b08ec10d3da2a0c728}} 
+f\+\_\+sin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\_tan@{f\_tan}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!f\_tan@{f\_tan}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa624edb4a2942fa7deccc5c8fe236b9ca}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa624edb4a2942fa7deccc5c8fe236b9ca}} 
+f\+\_\+tan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\_acos@{f\_acos}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!f\_acos@{f\_acos}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa5dbfec71e54a6da7160909c50f322da7}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa5dbfec71e54a6da7160909c50f322da7}} 
+f\+\_\+acos&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\_asin@{f\_asin}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!f\_asin@{f\_asin}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaac792c55dc90b897b550c836e2ad8b623}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaac792c55dc90b897b550c836e2ad8b623}} 
+f\+\_\+asin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\_atan@{f\_atan}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!f\_atan@{f\_atan}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaac3021dcc7cd1c2e711ab356904595617}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaac3021dcc7cd1c2e711ab356904595617}} 
+f\+\_\+atan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\_sqrt@{f\_sqrt}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!f\_sqrt@{f\_sqrt}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaad83c08f535e93072c640f12f688aa2f6}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaad83c08f535e93072c640f12f688aa2f6}} 
+f\+\_\+sqrt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\_ln@{f\_ln}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!f\_ln@{f\_ln}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa7b0f677919cf951fc21077c2999a4709}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaa7b0f677919cf951fc21077c2999a4709}} 
+f\+\_\+ln&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\_log@{f\_log}!smartcalc1.h@{smartcalc1.h}}\index{smartcalc1.h@{smartcalc1.h}!f\_log@{f\_log}}}\mbox{\Hypertarget{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaad5d71bce04d5544a6e7824e6caea286f}\label{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aaad5d71bce04d5544a6e7824e6caea286f}} 
+f\+\_\+log&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{smartcalc1_8h_a06ea81415ee5a2072758adfbe5ca1b03}\label{smartcalc1_8h_a06ea81415ee5a2072758adfbe5ca1b03}} 
+\index{smartcalc1.h@{smartcalc1.h}!calculation@{calculation}}
+\index{calculation@{calculation}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{calculation()}{calculation()}}
+{\footnotesize\ttfamily int calculation (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{double}]{value\+\_\+of\+\_\+x,  }\item[{double $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8h_a8d729394556f13cc9d089df4921b1bb6}\label{smartcalc1_8h_a8d729394556f13cc9d089df4921b1bb6}} 
+\index{smartcalc1.h@{smartcalc1.h}!calling\_function@{calling\_function}}
+\index{calling\_function@{calling\_function}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{calling\_function()}{calling\_function()}}
+{\footnotesize\ttfamily int calling\+\_\+function (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8h_aae3d2d5322fd5a476e7401d0054fabb9}\label{smartcalc1_8h_aae3d2d5322fd5a476e7401d0054fabb9}} 
+\index{smartcalc1.h@{smartcalc1.h}!create\_list\_item@{create\_list\_item}}
+\index{create\_list\_item@{create\_list\_item}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{create\_list\_item()}{create\_list\_item()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structlist}{list}} $\ast$ create\+\_\+list\+\_\+item (\begin{DoxyParamCaption}\item[{double}]{val,  }\item[{int}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Создает новый элемент 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+{\em priority} & \\
+\hline
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct list$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{smartcalc1_8h_a99d0241818a773845407fb131dc81ccb}\label{smartcalc1_8h_a99d0241818a773845407fb131dc81ccb}} 
+\index{smartcalc1.h@{smartcalc1.h}!delete\_end\_list@{delete\_end\_list}}
+\index{delete\_end\_list@{delete\_end\_list}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{delete\_end\_list()}{delete\_end\_list()}}
+{\footnotesize\ttfamily void delete\+\_\+end\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8h_aae620175128539759cc507ce69d488c4}\label{smartcalc1_8h_aae620175128539759cc507ce69d488c4}} 
+\index{smartcalc1.h@{smartcalc1.h}!delete\_start\_list@{delete\_start\_list}}
+\index{delete\_start\_list@{delete\_start\_list}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{delete\_start\_list()}{delete\_start\_list()}}
+{\footnotesize\ttfamily void delete\+\_\+start\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8h_a43e3e7598c730546200fde55a59fd99e}\label{smartcalc1_8h_a43e3e7598c730546200fde55a59fd99e}} 
+\index{smartcalc1.h@{smartcalc1.h}!insert\_end\_list@{insert\_end\_list}}
+\index{insert\_end\_list@{insert\_end\_list}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{insert\_end\_list()}{insert\_end\_list()}}
+{\footnotesize\ttfamily void insert\+\_\+end\+\_\+list (\begin{DoxyParamCaption}\item[{double}]{val,  }\item[{int}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}}]{element,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8h_aef1f34588ddc98c4e46eee002274fc3f}\label{smartcalc1_8h_aef1f34588ddc98c4e46eee002274fc3f}} 
+\index{smartcalc1.h@{smartcalc1.h}!insert\_start\_list@{insert\_start\_list}}
+\index{insert\_start\_list@{insert\_start\_list}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{insert\_start\_list()}{insert\_start\_list()}}
+{\footnotesize\ttfamily void insert\+\_\+start\+\_\+list (\begin{DoxyParamCaption}\item[{double}]{val,  }\item[{int}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}}}]{element,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+{\em priority} & \\
+\hline
+{\em element} & \\
+\hline
+{\em head} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{smartcalc1_8h_aa867963c7cd8f6841b3760d8b185191e}\label{smartcalc1_8h_aa867963c7cd8f6841b3760d8b185191e}} 
+\index{smartcalc1.h@{smartcalc1.h}!parser@{parser}}
+\index{parser@{parser}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}}
+{\footnotesize\ttfamily int parser (\begin{DoxyParamCaption}\item[{char}]{expression\mbox{[}256\mbox{]},  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head,  }\item[{double}]{val\+\_\+of\+\_\+x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8h_a1b7847a7965bb53f384f32ebfa9db1c3}\label{smartcalc1_8h_a1b7847a7965bb53f384f32ebfa9db1c3}} 
+\index{smartcalc1.h@{smartcalc1.h}!return\_end\_list@{return\_end\_list}}
+\index{return\_end\_list@{return\_end\_list}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{return\_end\_list()}{return\_end\_list()}}
+{\footnotesize\ttfamily int return\+\_\+end\+\_\+list (\begin{DoxyParamCaption}\item[{double $\ast$}]{val,  }\item[{int $\ast$}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} $\ast$}]{element,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8h_ae3de7677b138df5d71ebc2aa0b205b6f}\label{smartcalc1_8h_ae3de7677b138df5d71ebc2aa0b205b6f}} 
+\index{smartcalc1.h@{smartcalc1.h}!return\_start\_list@{return\_start\_list}}
+\index{return\_start\_list@{return\_start\_list}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{return\_start\_list()}{return\_start\_list()}}
+{\footnotesize\ttfamily int return\+\_\+start\+\_\+list (\begin{DoxyParamCaption}\item[{double $\ast$}]{val,  }\item[{int $\ast$}]{priority,  }\item[{enum \mbox{\hyperlink{smartcalc1_8h_aa94081298ab2dfd0f261cce6c203d9aa}{element}} $\ast$}]{element,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{smartcalc1_8h_a55eac194bed068f27efb5b70279aadf8}\label{smartcalc1_8h_a55eac194bed068f27efb5b70279aadf8}} 
+\index{smartcalc1.h@{smartcalc1.h}!stack\_work@{stack\_work}}
+\index{stack\_work@{stack\_work}!smartcalc1.h@{smartcalc1.h}}
+\doxysubsubsection{\texorpdfstring{stack\_work()}{stack\_work()}}
+{\footnotesize\ttfamily int stack\+\_\+work (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{initial\+\_\+list,  }\item[{struct \mbox{\hyperlink{structlist}{list}} $\ast$$\ast$}]{stack }\end{DoxyParamCaption})}
+
